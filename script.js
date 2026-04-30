@@ -137,13 +137,13 @@
         <p class="project-desc">
           ${repo.description || "A data-focused project showcasing practical problem solving."}
         </p>
-
-        <div class="tech-stack">
-          <span>${repo.language || "Code"}</span>
-
-          <span>Html</span>
-          <span>Java Script</span>
-        </div>
+        
+       <div class="tech-stack">
+  <span class="tag">${repo.language || "Code"}</span>
+  <span class="tag">HTML</span>
+  <span class="tag">CSS</span>
+  <span class="tag">JavaScript</span>
+</div>
         <a href="${repo.html_url}" target="_blank" class="github-btn">
           <i class="fab fa-github"></i> View on Github →
         </a>
