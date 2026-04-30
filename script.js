@@ -142,7 +142,7 @@
           <span>${repo.language || "Code"}</span>
           <span>Html</span>
           <span>Java Script</span>
-          <span>GitHub</span>
+          
         </div>
 
         <a href="${repo.html_url}" target="_blank" class="github-btn">
