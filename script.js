@@ -141,7 +141,6 @@
        <div class="tech-stack">
   <span class="tag">${repo.language || "Code"}</span>
   <span class="tag">HTML</span>
-  <span class="tag">CSS</span>
   <span class="tag">JavaScript</span>
 </div>
         <a href="${repo.html_url}" target="_blank" class="github-btn">
