@@ -106,7 +106,7 @@
   // =========================
   // GITHUB PROJECTS (FIXED)
   // =========================
-  fetch("https://api.github.com/users/Absarbhat/repos")
+  fetch("https://api.github.com/users/Absarbhat/repos?per_page=100")
   .then(res => {
     if (!res.ok) throw new Error("API failed");
     return res.json();
@@ -137,7 +137,7 @@
         <p class="project-desc">
           ${repo.description || "A data-focused project showcasing practical problem solving."}
         </p>
-        
+
        <div class="tech-stack">
   <span class="tag">${repo.language || "Code"}</span>
   <span class="tag">HTML</span>
