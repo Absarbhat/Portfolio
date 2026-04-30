@@ -140,12 +140,9 @@
 
         <div class="tech-stack">
           <span>${repo.language || "Code"}</span>
-<<<<<<< HEAD
           <span>Html</span>
           <span>Java Script</span>
-=======
           <span>GitHub</span>
->>>>>>> 47f1d1c3224262dac74c50c020d6fefe73ee873f
         </div>
 
         <a href="${repo.html_url}" target="_blank" class="github-btn">
