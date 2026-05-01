@@ -1,7 +1,4 @@
-// =========================
-  // CURSOR
-  // =========================
-  const cursor = document.querySelector(".cursor");
+ const cursor = document.querySelector(".cursor");
 
   if (cursor) {
     document.addEventListener("mousemove", (e) => {
@@ -9,37 +6,25 @@
       cursor.style.left = e.clientX + "px";
     });
   }
-
-  // =========================
-  // SMOOTH SCROLL
-  // =========================
   function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({
       behavior: "smooth"
     });
   }
-
-  // =========================
-  // MOBILE MENU
-  // =========================
   function toggleMenu() {
     const menu = document.getElementById("menu");
     menu.classList.toggle("show");
   }
 
-  // Close menu on click
+  
   document.querySelectorAll("#menu a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("menu").classList.remove("show");
     });
   });
-
-  // =========================
-  // GSAP ANIMATIONS (FINAL)
-  // =========================
   gsap.registerPlugin(ScrollTrigger);
 
-  // HERO
+  
   gsap.from(".hero-title", {
     y: 100,
     opacity: 0,
@@ -53,7 +38,6 @@
     duration: 1,
     delay: 0.3
   });
-
   gsap.from(".hero button", {
     opacity: 0,
     y: 30,
@@ -61,8 +45,6 @@
     stagger: 0.2,
     delay: 0.5
   });
-
-  // SECTIONS
   gsap.utils.toArray(".section").forEach(section => {
     gsap.from(section, {
       opacity: 0,
@@ -76,17 +58,13 @@
     });
   });
 
-  // =========================
-  // NAV SCROLL EFFECT
-  // =========================
+
   window.addEventListener("scroll", () => {
     document.querySelector(".nav")
       .classList.toggle("scrolled", window.scrollY > 50);
   });
 
-  // =========================
-  // MAGNETIC BUTTON EFFECT
-  // =========================
+  
   document.querySelectorAll("button, .github-btn").forEach(btn => {
     btn.addEventListener("mousemove", e => {
       const rect = btn.getBoundingClientRect();
@@ -100,12 +78,7 @@
     });
   });
 
-  // =========================
-  // GITHUB PROJECTS (SMART)
-  // =========================
-  // =========================
-  // GITHUB PROJECTS (FIXED)
-  // =========================
+  
   fetch("https://api.github.com/users/Absarbhat/repos?per_page=100")
   .then(res => {
     if (!res.ok) throw new Error("API failed");
@@ -167,9 +140,7 @@
       </div>
     `;
   });
-  // =========================
-  // EMAILJS (FIXED)
-  // =========================
+  
   (function() {
     emailjs.init("dQNa7BG4h-XEz_JXv");
   })();
@@ -187,9 +158,7 @@
         console.log(error);
       });
   });
-  // =========================
-// PREMIUM RADAR CHART
-// =========================
+
 
 const ctx = document.getElementById("radarChart");
 
