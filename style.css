@@ -91,7 +91,7 @@ body {
 .social-icons {
   display: flex;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .social-icons a {
@@ -2420,4 +2420,185 @@ body {
 /* FORCE BLUE UNDERLINE FOR APPROACH */
 #approach .section-title::after {
   background: #3b82f6 !important; /* your theme blue */
+}
+/* =========================
+   🔥 HERO LAPTOP UPGRADE
+========================= */
+@media (min-width: 769px) {
+
+  /* HERO LAYOUT */
+  #home.hero {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 12%;
+  }
+
+  /* BIGGER NAME */
+  #home .hero-title {
+    font-size: 72px;
+  }
+
+  /* BIGGER TAGLINE */
+  #home .tagline {
+    font-size: 34px;
+  }
+
+  /* SUBTEXT WIDTH */
+  #home .hero-sub {
+    max-width: 600px;
+    font-size: 18px;
+  }
+
+  /* BUTTONS LEFT */
+  #home .hero-btns {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+
+  /* SOCIAL ICONS LEFT + LOWER */
+  #home .social-icons {
+    margin-top: 40px;
+    transform: translateX(50px); /* slight right */
+  }
+
+  /* ARROW UNDER ICONS */
+  #home .hero-arrow {
+    margin-top: 12px;
+    transform: translateX(35px);
+  }
+}
+/* =========================
+   FINAL HERO ALIGN FIX
+========================= */
+@media (min-width: 769px) {
+
+  /* SUBTEXT (Data Science Undergrad...) */
+  #home .hero-sub {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 600px;
+  }
+
+  /* SOCIAL ICONS (reference point) */
+  #home .social-icons {
+    margin-top: 40px;
+    transform: translateX(30px);
+  }
+
+  /* ARROW FIX (bring under icons, not floating) */
+  #home .hero-arrow {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    margin-top: 12px !important;
+    transform: translateX(35px); /* align with icons */
+    
+    display: flex;
+    justify-content: flex-start;
+  }
+
+}
+/* =========================
+   ARROW BELOW BUTTON FIX
+========================= */
+@media (min-width: 769px) {
+
+  /* Make hero stack left */
+  #home.hero {
+    align-items: flex-start;
+  }
+
+  /* Arrow exactly under buttons */
+  #home .hero-arrow {
+    position: relative !important;
+    left: 0 !important;
+    transform: none !important;
+
+    margin-top: 15px !important;   /* space below buttons */
+    margin-left: 180px !important; /* aligns under Get in Touch */
+    
+    display: flex;
+    justify-content: flex-start;
+  }
+
+}
+/* =========================
+   BIGGER HERO BUTTONS (LAPTOP)
+========================= */
+@media (min-width: 769px) {
+
+  #home .hero-btns button,
+  #home .hero-btns .btn {
+    padding: 14px 28px !important;  /* bigger size */
+    font-size: 15px !important;     /* bigger text */
+    border-radius: 10px;
+  }
+
+}
+/* =========================
+   HELLO TYPE + DELETE (FINAL)
+========================= */
+
+.hero-greeting {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+/* typing text */
+.hero-greeting span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: 0ch;
+  animation: typing 4s steps(11) infinite;
+}
+
+/* fake cursor (separate, no line bug) */
+.hero-greeting::after {
+  content: "|";
+  margin-left: 3px;
+  color: #ffffff;
+  animation: blink 0.7s infinite;
+}
+
+/* typing + deleting */
+@keyframes typing {
+  0%   { width: 0ch; }
+
+  40%  { width: 11ch; }  /* full text */
+  60%  { width: 11ch; }  /* pause */
+
+  100% { width: 0ch; }   /* delete */
+}
+
+/* blinking cursor */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* MOBILE: FORCE HELLO TO LEFT WITH SPACE */
+@media (max-width: 768px) {
+
+  #home .hero-greeting {
+    align-self: flex-start !important;  /* break center alignment */
+    margin-left: 18px !important;       /* space from left */
+    text-align: left !important;
+  }
+
+}
+
+
+/* =========================
+   LAPTOP: BIGGER SIZE
+========================= */
+@media (min-width: 769px) {
+  .hero-greeting {
+    font-size: 50px;  /* adjust: 28–34px */
+  }
 }
