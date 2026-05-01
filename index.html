@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -30,8 +30,10 @@
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
   <ul id="menu">
+    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
@@ -43,7 +45,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
   
   <h1 class="hero-title">
   Mohammad <span>Absar.</span>
@@ -331,6 +333,56 @@ I am continuously improving my abilities in Python, SQL, and modern data tools.
   </div>
 
 </section>
+<section id="approach" class="section split-section">
+
+  <!-- LEFT -->
+  <div class="split-left">
+    <h2 class="section-title">Problem-Solving Approach</h2>
+    <p class="light-text">
+      My workflow for turning raw data into reliable, practical, and deployable solutions.
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="split-right">
+    <div class="approach-grid">
+
+      <div class="approach-card">
+        <div class="approach-num">1</div>
+        <h3>Data Collection</h3>
+        <p>Gather and integrate multi-source datasets.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num">2</div>
+        <h3>Exploration</h3>
+        <p>Analyze patterns and insights.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num">3</div>
+        <h3>Modeling</h3>
+        <p>Apply ML and statistical techniques.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num">4</div>
+        <h3>Validation</h3>
+        <p>Test, measure, and iterate.</p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-num">5</div>
+        <h3>Deployment</h3>
+        <p>Production-ready dashboards and solutions.</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+  
 
   <section id="contact" class="section split-section">
 

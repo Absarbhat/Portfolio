@@ -2264,3 +2264,160 @@ body {
   border: 1px solid rgba(255,255,255,0.2);
   color: white;
 }
+/* =========================
+   APPROACH SECTION (FINAL)
+========================= */
+
+.approach-section {
+  width: 100%;
+}
+
+/* LEFT TEXT */
+.approach-section .split-left {
+  max-width: 500px;
+}
+
+/* GRID (RIGHT SIDE) */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* CARD */
+.approach-card {
+  padding: 26px 20px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* HOVER */
+.approach-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.18);
+}
+
+/* NUMBER CIRCLE */
+.approach-num {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8) !important;
+  color: #ffffff !important;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 18px rgba(56, 189, 248, 0.6),
+    0 0 40px rgba(14, 165, 233, 0.4);
+}
+
+/* TEXT */
+.approach-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.approach-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 🔥 FIX FOR 5TH CARD */
+.approach-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+/* PHONE */
+@media (max-width: 600px) {
+  .approach-card {
+    padding: 30px 22px;
+  }
+
+  .approach-num {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .approach-card h3 {
+    font-size: 20px;
+  }
+
+  .approach-card p {
+    font-size: 15px;
+  }
+}
+.section-title.center {
+  text-align: center;
+  position: relative;
+}
+/* FIX: Approach Numbers Color */
+.approach-num {
+  background: #38bdf8 !important; /* your theme blue */
+  color: #0f172a !important;      /* dark text for contrast */
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6) !important;
+}
+/* FIX: Center underline */
+.section-title.center {
+  text-align: center;
+  position: relative;
+}
+
+.section-title.center::after {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* FORCE FIX: Approach numbering */
+#approach .approach-card .approach-num {
+  background: #3b82f6 !important;
+  color: #0f172a !important;
+  border: none !important;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.7) !important;
+}
+
+/* FORCE FIX: Center underline only for Approach title */
+#approach .section-title {
+  text-align: center !important;
+  position: relative !important;
+}
+
+#approach .section-title::after {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+/* FORCE BLUE UNDERLINE FOR APPROACH */
+#approach .section-title::after {
+  background: #3b82f6 !important; /* your theme blue */
+}
