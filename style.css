@@ -2602,3 +2602,195 @@ body {
     font-size: 50px;  /* adjust: 28–34px */
   }
 }
+/* =========================
+   LAPTOP ONLY: APPROACH TIMELINE
+========================= */
+
+@media (min-width: 769px) {
+
+  #approach {
+    align-items: center !important;
+  }
+
+  #approach .split-left {
+    width: 34% !important;
+  }
+
+  #approach .split-right {
+    width: 66% !important;
+  }
+
+  #approach .approach-grid {
+    display: flex !important;
+    gap: 18px !important;
+    position: relative;
+  }
+
+  #approach .approach-grid::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 45px;
+    right: 45px;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, rgba(59,130,246,0.15));
+    z-index: 0;
+  }
+
+  #approach .approach-card {
+    flex: 1;
+    min-height: 210px;
+    padding: 24px 16px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    background: rgba(255,255,255,0.035) !important;
+    border: 1px solid rgba(59,130,246,0.22) !important;
+    border-radius: 18px !important;
+    box-shadow: none !important;
+  }
+
+  #approach .approach-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(59,130,246,0.6) !important;
+    box-shadow: 0 18px 35px rgba(59,130,246,0.15) !important;
+  }
+
+  #approach .approach-num {
+    width: 58px !important;
+    height: 58px !important;
+    margin: 0 auto 22px !important;
+    border-radius: 50% !important;
+
+    background: #3b82f6 !important;
+    color: white !important;
+    font-size: 22px !important;
+    font-weight: 600 !important;
+
+    box-shadow: 0 0 22px rgba(59,130,246,0.55) !important;
+  }
+
+  #approach .approach-card h3 {
+    font-size: 16px !important;
+    color: white !important;
+    margin-bottom: 8px !important;
+  }
+
+  #approach .approach-card p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    color: rgba(255,255,255,0.65) !important;
+  }
+}
+/* SOCIAL ICONS: LEFT WITH SPACING (LAPTOP ONLY) */
+@media (min-width: 769px) {
+
+  .social-icons {
+    align-self: flex-start;   /* move to left */
+    margin-left: 40px;        /* space from edge */
+  }
+
+}
+/* BIG ABOUT TAGLINE LIKE REFERENCE */
+.tagline {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1px;
+
+  color: #ffffff;
+  max-width: 480px;
+  margin: 18px 0 22px;
+
+  background: none !important;
+  -webkit-text-fill-color:white !important;
+  text-transform: none !important;
+  text-shadow: 0 0 18px rgba(255,255,255,0.15);
+}
+
+/* phone safe */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+/* FINAL FIX: BIGGER HELLO I AM ON PHONE */
+@media (max-width: 768px) {
+
+  #home.hero .hero-greeting {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  #home.hero .hero-greeting span {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+  }
+
+  #home.hero .hero-greeting::after {
+    font-size: 26px !important;
+  }
+}
+/* MOBILE NAV: COMPACT VISIBLE LINKS */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 18px !important;
+
+    padding: 14px 16px !important;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  .nav h1 {
+    font-size: 24px !important;
+    flex-shrink: 0;
+  }
+
+  .nav ul,
+  .nav ul.show {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    gap: 18px !important;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav ul li a {
+    font-size: 13px !important;
+    padding: 0 !important;
+  }
+
+  .nav-resume {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+  body {
+    padding-top: 70px !important;
+  }
+}
